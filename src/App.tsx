@@ -10,7 +10,10 @@ const App: React.FC = () => {
     // setTodos([...todos, { id: Math.random().toString(), text }]);
     setTodos(prevTodos => [
       ...prevTodos,
-      { id: Math.random().toString(), text },
+      {
+        id: Math.random().toString() + Math.random(),
+        text,
+      },
     ]);
   };
 

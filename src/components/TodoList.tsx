@@ -1,3 +1,4 @@
+import "./TodoList.css";
 import React from "react";
 import { Todo } from "./../todo.model";
 

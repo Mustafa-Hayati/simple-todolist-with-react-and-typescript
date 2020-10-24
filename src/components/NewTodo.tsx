@@ -1,3 +1,4 @@
+import "./NewTodo.css";
 import React, { useRef } from "react";
 
 type NewTodoProps = {
@@ -12,13 +13,15 @@ const NewTodo: React.FC<NewTodoProps> = props => {
 
     const enteredText = textInputRef.current!.value;
 
+    if (!enteredText) return;
+
     props.onAddTodo(enteredText);
     textInputRef.current!.value = "";
   };
 
   return (
     <form onSubmit={todoSumitHandler}>
-      <div>
+      <div className="form-control">
         <label htmlFor="todo-text">Todo Text</label>
         <input
           autoFocus
